@@ -22,11 +22,13 @@ function Form() {
         <div className="form">
             <h1>Form</h1>
             <form onSubmit={handleTitle}>
-                <input
-                    type="text"
-                    value={titleBlog}
-                    onChange={event => setTitleBlog(event.target.value)}
-                />
+                    <label for="title">Titolo</label>
+                    <input
+                        id="title"
+                        type="text"
+                        value={titleBlog}
+                        onChange={event => setTitleBlog(event.target.value)}
+                    />
                 <button>Invia</button>
             </form>
             <div className="text-container">
