@@ -68,11 +68,17 @@ function Form() {
 
                 <button className="margin">Invia</button>
             </form>
-            <div className="text-container">
+            <div className="card-container">
                 {
                     blogs.map((blog, index) => (
-                        <div key={`title_${index}`} className="text">
+                        <div key={`card_${index}`} className="card">
 
+                            <figure>
+                                <img src="" alt="" />
+                            </figure>
+
+                            <div className="text">
+                                
                             <div className="title">
                                 <h3>{blog.title}</h3>
                                 <button onClick={() => deleteTitle(index)}><BsTrash /></button>
@@ -85,6 +91,9 @@ function Form() {
                             <div className="category">
                                 <span>{blog.category}</span>
                             </div>
+
+                            </div>
+
 
                         </div>
                     ))
