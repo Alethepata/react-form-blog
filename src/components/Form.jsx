@@ -5,7 +5,8 @@ import { BsTrash } from "react-icons/bs";
 function Form() {
     const dataDefault = {
         title: '',
-        description: ''
+        description: '',
+        category:''
     } 
 
     const [blogs, setBlogs] = useState([]);
@@ -51,7 +52,21 @@ function Form() {
                     ></textarea>
                 </div>
 
-                <button>Invia</button>
+                <div>
+                <label for="category">Scegli la categoria</label>
+                    <select
+                        id="category"
+                        value={blogData.category}
+                        onChange={event => addData('category', event.target.value)}
+                    >
+                        <option selected>Categoria</option>
+                        <option value="cibo">Cibo</option>
+                        <option value="film">Film</option>
+                        <option value="videogame">Videogame</option>
+                    </select>
+                </div>
+
+                <button className="margin">Invia</button>
             </form>
             <div className="text-container">
                 {
@@ -65,6 +80,10 @@ function Form() {
 
                             <div className="description">
                                 <p>{blog.description}</p>
+                            </div>
+
+                            <div className="category">
+                                <span>{blog.category}</span>
                             </div>
 
                         </div>
