@@ -14,19 +14,14 @@
         padding: 20px 0;
         label{
             display: block;
+            margin-bottom: 5px;
         }
-        input, button, textarea{
+        input, button, textarea, select{
             box-shadow: 5px 5px 5px rgb(153, 153, 153);
             border: 1px solid rgb(182, 174, 174);   
-        }
-        
-        input, textarea{
-            border-radius: 5px;
-        }
-        button{
-            border-radius: 10px;
-            padding: 5px 10px;
             background-color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
         }
     }
     .text{
