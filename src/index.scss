@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.form{
+    padding: 20px 30px;
+    form{
+        padding: 20px 0;
+        label{
+            display: block;
+        }
+        input, button{
+            box-shadow: 5px 5px 5px rgb(153, 153, 153);
+            border: 1px solid rgb(182, 174, 174);   
+        }
+        
+        input{
+            border-radius: 5px;
+        }
+        button{
+            margin-left: 20px ;
+            border-radius: 10px;
+            padding: 5px 10px;
+            background-color: white;
+        }
+    }
+    .text{
+        display: flex;
+        padding: 10px 0;
+        h3{
+            margin-right: 20px;
+        }
+        button{
+            font-size: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+}
