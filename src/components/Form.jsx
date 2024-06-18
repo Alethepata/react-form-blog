@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { BsTrash } from "react-icons/bs";
+
 function Form() {
     const [blogs, setBlogs] = useState([]);
     const [titleBlog, setTitleBlog] = useState('');
@@ -10,6 +12,10 @@ function Form() {
         setBlogs([...blogs, titleBlog]);
 
         setTitleBlog('');
+    }
+
+    const deleteTitle = indexTitle => { 
+        setBlogs(blogs => blogs.filter((_, index) => indexTitle !== index))
     }
 
     return (
@@ -23,9 +29,14 @@ function Form() {
                 />
                 <button>Invia</button>
             </form>
-            <div>
+            <div className="text-container">
                 {
-                    blogs.map((title, index) => <h3 key={`title_${index}`}>{title }</h3>)
+                    blogs.map((title, index) => (
+                        <div className="text">
+                            <h3 key={`title_${index}`}>{title}</h3>
+                            <button onClick={() => deleteTitle(index)}><BsTrash /></button>
+                        </div>
+                    ))
                 }
             </div>
         </div>
