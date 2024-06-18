@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+.margin{
+    margin: 20px 0;
+}
+
 .form{
     padding: 20px 30px;
     form{
@@ -11,26 +15,27 @@
         label{
             display: block;
         }
-        input, button{
+        input, button, textarea{
             box-shadow: 5px 5px 5px rgb(153, 153, 153);
             border: 1px solid rgb(182, 174, 174);   
         }
         
-        input{
+        input, textarea{
             border-radius: 5px;
         }
         button{
-            margin-left: 20px ;
             border-radius: 10px;
             padding: 5px 10px;
             background-color: white;
         }
     }
     .text{
-        display: flex;
         padding: 10px 0;
-        h3{
-            margin-right: 20px;
+        .title{
+            display: flex;
+            h3{
+                margin-right: 20px;
+            }
         }
         button{
             font-size: 20px;
